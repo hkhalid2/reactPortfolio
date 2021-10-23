@@ -1,6 +1,6 @@
-import React from "react";
-import PortfolioContainer from "./components/PortfolioContainer";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
-const App = () => <PortfolioContainer />;
-
-export default App;
+ReactDOM.render(<App />, document.getElementById('root'));
