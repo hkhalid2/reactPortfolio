@@ -4,21 +4,46 @@ export default function Blog() {
   return (
     <div>
       <h1>Portfolio</h1>
-      <p>
-        Donec a volutpat quam. Curabitur nec varius justo, sed rutrum ligula.
-        Curabitur pellentesque turpis sit amet eros iaculis, a mollis arcu
-        dictum. Ut vel ante eget massa ornare placerat. Etiam nisl orci, finibus
-        sodales volutpat et, hendrerit ut dolor. Suspendisse porta dictum nunc,
-        sed pretium risus rutrum eget. Nam consequat, ligula in faucibus
-        vestibulum, nisi justo laoreet risus, luctus luctus mi lacus sit amet
-        libero. Class aptent taciti sociosqu ad litora torquent per conubia
-        nostra, per inceptos himenaeos. Mauris pretium condimentum tellus eget
-        lobortis. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-        Donec placerat accumsan mi, ut congue neque placerat eu. Donec nec ipsum
-        in velit pellentesque vehicula sit amet at augue. Maecenas aliquam
-        bibendum congue. Pellentesque semper, lectus non ullamcorper iaculis,
-        est ligula suscipit velit, sed bibendum turpis dui in sapien.
-      </p>
-    </div>
+      
+      <section id="Projects" class="container"/ >
+            <h3>Projects:</h3>
+            
+            <div class="container" id="project-list" />
+
+                <div class="container-md">
+                    <h5>- Vesuvio Restaurant App </h5>
+                    <a href="https://salty-brushlands-40310.herokuapp.com">Link to Live Deployment</a>
+                    <br />
+                    <a href="https://github.com/hkhalid2/reservationsApp"> Link to Github Repository</a>
+                    <br />
+                    <img class="container-sm" src="./assets/images/screenshot1.png" width="400" height="300"/>
+                    <br />
+                    <br />
+                    <img class="container-sm" src="./assets/images/screenshot2.png" width="400" height="300"/>
+                </div>
+
+                <div class="container-md">
+                    <h5>- Note Taker App</h5>
+                    <a href="https://sleepy-sands-68935.herokuapp.com"> Link to Live Deployment</a>
+                    <br />
+                    <a href="https://github.com/hkhalid2/noteTaker">Link to Github Repository</a>
+                    <br />
+                    <img class="container-sm" src="./assets/images/demo2.gif" width="400" height="300" />
+                </div>
+                
+                <div class="container-md">
+                    <h5>- Shield I-D</h5>
+                    <a href="https://endlessashley.github.io/Shield-ID/">Link to Live Deployment</a>
+                    <br />
+                    <a href="https://github.com/endlessashley/Shield-ID">Link to Github Repository</a>
+                    <br />
+                    <img class="container-sm" src="./assets/images/project.png" width="400" height="300"/>
+                </div>
+
+
+
+            </div>
+        
+    
   );
 }
