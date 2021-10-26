@@ -1,14 +1,19 @@
 import React from 'react';
+import Screenshot1 from '../../images/screenshot1.png';
+import Screenshot2 from '../../images/screenshot2.png';
+import DemoGif from '../../images/demo2.gif';
+import ProjectShot from '../../images/project.png';
+import '../../styles/style.css';
+
 
 export default function Blog() {
   return (
     <div>
       <h1>Portfolio</h1>
       
-      <section id="Projects" class="container"/ >
+
             <h3>Projects:</h3>
             
-            <div class="container" id="project-list" />
 
                 <div class="container-md">
                     <h5>- Vesuvio Restaurant App </h5>
@@ -16,10 +21,10 @@ export default function Blog() {
                     <br />
                     <a href="https://github.com/hkhalid2/reservationsApp"> Link to Github Repository</a>
                     <br />
-                    <img class="container-sm" src="./assets/images/screenshot1.png" width="400" height="300"/>
+                    <img class="container-sm" src={Screenshot1} width="300" height="300"/>
                     <br />
                     <br />
-                    <img class="container-sm" src="./assets/images/screenshot2.png" width="400" height="300"/>
+                    <img class="container-sm" src={Screenshot2} width="300" height="300"/>
                 </div>
 
                 <div class="container-md">
@@ -28,7 +33,7 @@ export default function Blog() {
                     <br />
                     <a href="https://github.com/hkhalid2/noteTaker">Link to Github Repository</a>
                     <br />
-                    <img class="container-sm" src="./assets/images/demo2.gif" width="400" height="300" />
+                    <img class="container-sm" src={DemoGif} width="300" height="300" />
                 </div>
                 
                 <div class="container-md">
@@ -37,7 +42,7 @@ export default function Blog() {
                     <br />
                     <a href="https://github.com/endlessashley/Shield-ID">Link to Github Repository</a>
                     <br />
-                    <img class="container-sm" src="./assets/images/project.png" width="400" height="300"/>
+                    <img class="container-sm" src={ProjectShot} width="300" height="300"/>
                 </div>
 
 

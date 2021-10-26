@@ -1,4 +1,5 @@
 import React from 'react';
+import '../../styles/style.css';
 
 export default function Resume() {
     return (
@@ -6,7 +7,8 @@ export default function Resume() {
             <div class="text-block">
                 <h2>Resume </h2>
                 <p class="container">
-                    Placeholder        </p>
+                <a class="nav-link" href="../../documents/resumeupdated.pdf">Resume</a>      
+                     </p>
             </div>
         </section>
     );
