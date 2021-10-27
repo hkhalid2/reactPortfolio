@@ -16,6 +16,7 @@ body {
   
   .container h1 {
     display: inline-block;
+    text-align: center;
     font-size: 48px;
   }
   
@@ -46,6 +47,18 @@ body {
   a {
     color: #312863;
     text-decoration: none;
+  }
+
+  .h1, h2, h3, h4 {
+    text-align: center;
+  }
+
+  .div h1 {
+    text-align: center;
+  }
+
+  .h1 h1 {
+    text-align: center;
   }
   
   
