@@ -1,76 +1,85 @@
 import React, { useState } from 'react';
 import '../../styles/style.css';
 
-// export default function Contact() {
-//   return (
-//     <div>
-//       <h1>Contact Page</h1>
-//       <p class="container">
-//         Integer cursus bibendum sem non pretium. Vestibulum in aliquet sem, quis
-//         molestie urna. Aliquam semper ultrices varius. Aliquam faucibus sit amet
-//         magna a ultrices. Aenean pellentesque placerat lacus imperdiet
-//         efficitur. In felis nisl, luctus non ante euismod, tincidunt bibendum
-//         mi. In a molestie nisl, eu sodales diam. Nam tincidunt lacus quis magna
-//         posuere, eget tristique dui dapibus. Maecenas fermentum elementum
-//         faucibus. Quisque nec metus vestibulum, egestas massa eu, sollicitudin
-//         ipsum. Nulla facilisi. Sed ut erat ligula. Nam tincidunt nunc in nibh
-//         dictum ullamcorper. Class aptent taciti sociosqu ad litora torquent per
-//         conubia nostra, per inceptos himenaeos. Etiam ornare rutrum felis at
-//         rhoncus. Etiam vel condimentum magna, quis tempor nulla.
-//       </p>
-//     </div>
-//   );
-// }
+//function that uses regex to validate email.
+function validateEmail(email) {
+  const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(email).toLowerCase());
+}
 
-function Form() {
-  // Here we set two state variables for firstName and lastName using `useState`
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+function Contact() {
+  
+  const [userName, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [comment, setComment] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleInputChange = (e) => {
-    // Getting the value and name of the input which triggered the change
-    const { name, value } = e.target;
+    
+    const { target } = e;
+    const inputType = target.name;
+    const inputValue = target.value;
 
-    // Ternary statement that will call either setFirstName or setLastName based on what field the user is typing in
-    return name === 'firstName' ? setFirstName(value) : setLastName(value);
+    
+    if (inputType === 'email') {
+      setEmail(inputValue);
+    } else if (inputType === 'userName') {
+      setName(inputValue);
+    } else {
+      setComment(inputValue);
+    }
   };
 
   const handleFormSubmit = (e) => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
+    
     e.preventDefault();
 
-    // Alert the user their first and last name, clear the inputs
-    alert(`Hello ${firstName} ${lastName}`);
-    setFirstName('');
-    setLastName('');
+    
+    if (!validateEmail(email) || !userName) {
+      setErrorMessage('Email invalid');
+      
+      return;
+    }
+   
+    setName('');
+    setComment('');
+    setEmail('');
   };
 
   return (
     <div>
-      <p>
-        Hello {firstName} {lastName}
-      </p>
+      <p></p>
       <form className="form">
         <input
-          value={firstName}
-          name="firstName"
+          value={email}
+          name="email"
           onChange={handleInputChange}
-          type="text"
-          placeholder="First Name"
+          type="email"
+          placeholder="Email"
         />
         <input
-          value={lastName}
-          name="lastName"
+          value={userName}
+          name="userName"
           onChange={handleInputChange}
           type="text"
-          placeholder="Last Name"
+          placeholder="Input your fullname"
         />
-        <button type="button" onClick={handleFormSubmit}>
-          Submit
-        </button>
+        <input
+          value={comment}
+          name="comment"
+          onChange={handleInputChange}
+          type="text"
+          placeholder="Leave a comment or Question."
+        />
+        <button type="button" onClick={handleFormSubmit}>Submit</button>
       </form>
+      {errorMessage && (
+        <div>
+          <p className="error-text">{errorMessage}</p>
+        </div>
+      )}
     </div>
   );
 }
 
-export default Form;
+export default Contact;

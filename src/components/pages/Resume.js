@@ -25,9 +25,8 @@ export default function Resume() {
 
 
                 </ul>
-                <p>For full resume click below. </p>
                 <p class="container">
-                    <a href="https://drive.google.com/file/d/1zmLnOcQnnsNMQjj0pie1JgstY399hn63/view?usp=sharing">Resume</a>
+                    <a href="https://drive.google.com/file/d/1zmLnOcQnnsNMQjj0pie1JgstY399hn63/view?usp=sharing"> Click for Resume</a>
                 </p>
             </div>
         </section></>
