@@ -9,6 +9,8 @@ export default function Resume() {
                 <p>Developer's Proficiencies: </p>
                 <ul>
 
+                    <li>Python</li>
+                    <li>C++</li>
                     <li> CSS3</li>
                     <li>JavaScript</li>
                     <li>jQuery</li>
@@ -26,7 +28,7 @@ export default function Resume() {
 
                 </ul>
                 <p class="container">
-                    <a href="https://drive.google.com/file/d/1zmLnOcQnnsNMQjj0pie1JgstY399hn63/view?usp=sharing"> Click for Resume</a>
+                    <a href="https://docs.google.com/document/d/1urggPeLxCMPK9-V6uP08zvLSkl7WeptI/edit?usp=sharing&ouid=106419256327657655077&rtpof=true&sd=true"> Click for Resume</a>
                 </p>
             </div>
         </section></>
